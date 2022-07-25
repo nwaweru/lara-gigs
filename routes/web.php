@@ -18,4 +18,10 @@ Route::get('/', function () {
         'header' => 'Latest Listings',
         'listings' => Listing::all()
     ]);
-});
+})->name('home');
+
+Route::get('/listing/{id}', function($id) {
+    return view('listing', [
+        'listing' => Listing::findOrFail($id)
+    ]);
+})->name('listings.show');

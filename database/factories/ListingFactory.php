@@ -27,9 +27,9 @@ class ListingFactory extends Factory
         return [
             'title' => fake()->text,
             'tags' => fake()->word,
-            'company' => fake()->text,
-            'location' => fake()->text,
-            'email' => fake()->email,
+            'company' => fake()->company,
+            'location' => fake()->city,
+            'email' => fake()->companyEmail,
             'website' => fake()->url,
             'description' => fake()->paragraph
         ];

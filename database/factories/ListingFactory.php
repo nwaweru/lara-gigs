@@ -26,7 +26,7 @@ class ListingFactory extends Factory
     {
         return [
             'title' => fake()->text,
-            'tags' => fake()->word,
+            'tags' => 'laravel, api, backend',
             'company' => fake()->company,
             'location' => fake()->city,
             'email' => fake()->companyEmail,

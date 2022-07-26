@@ -2,6 +2,7 @@
 
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ListingController;
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,12 @@ Route::put('/listings/{id}', [ListingController::class, 'update'])->name('listin
 
 // Delete a listing
 Route::delete('/listings/{id}', [ListingController::class, 'destroy'])->name('listings.destroy');
+
+// Show register form
+Route::get('/register', [UserController::class, 'create'])->name('users.create');
+
+// Save user registration data
+Route::post('/users', [UserController::class, 'store'])->name('users.store');
+
+// Logout a user
+Route::post('/logout', [UserController::class, 'logout'])->name('logout');

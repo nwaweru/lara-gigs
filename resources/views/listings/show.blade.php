@@ -51,5 +51,11 @@
                 </div>
             </div>
         </x-card>
+
+        <x-card class="mt-4 p-2 flex space-x-6">
+            <a href="{{ route('listings.edit', ['id' => $listing->id]) }}">
+                <i class="fa-solid fa-edit"></i> Edit
+            </a>
+        </x-card>
     </div>
 @endsection

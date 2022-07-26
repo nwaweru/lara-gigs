@@ -91,7 +91,7 @@ class ListingController extends Controller
         if(auth()->user()->id !== $listing->user_id) {
             abort(403, 'Unauthorized action');
         }
-        
+
         $listing->delete();
 
         return redirect()->route('home')->with('message', 'Listing deleted successfully.');

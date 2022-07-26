@@ -42,5 +42,11 @@ Route::get('/register', [UserController::class, 'create'])->name('users.create')
 // Save user registration data
 Route::post('/users', [UserController::class, 'store'])->name('users.store');
 
+// Show login form
+Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
+
+// Log in a user
+Route::post('/users/authenticate', [UserController::class, 'login'])->name('users.login');
+
 // Logout a user
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');

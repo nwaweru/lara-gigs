@@ -56,6 +56,15 @@
             <a href="{{ route('listings.edit', ['id' => $listing->id]) }}">
                 <i class="fa-solid fa-edit"></i> Edit
             </a>
+
+            <form method="POST" action="{{ route('listings.destroy', ['id' => $listing->id]) }}">
+                @csrf
+                @method('DELETE')
+
+                <button class="text-red-500">
+                    <i class="fa-solid fa-trash"></i> Delete
+                </button>
+            </form>
         </x-card>
     </div>
 @endsection

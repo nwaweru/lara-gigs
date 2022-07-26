@@ -31,3 +31,6 @@ Route::get('/listings/{id}/edit', [ListingController::class, 'edit'])->name('lis
 
 // Save edited listing changes
 Route::put('/listings/{id}', [ListingController::class, 'update'])->name('listings.update');
+
+// Delete a listing
+Route::delete('/listings/{id}', [ListingController::class, 'destroy'])->name('listings.destroy');
